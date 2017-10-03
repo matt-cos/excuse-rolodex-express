@@ -1,0 +1,19 @@
+extends layout
+
+block content
+
+	<h1>Excuse Roladex</h1>	
+	<h3>Inspired by Seinfeld</h3>
+	div#roladex
+		ul
+			each user, i in userlist
+				if i == 0
+					li.active
+						p=user.excuse + " " + i
+						button( onClick="prevActive()" ) Previous
+						button(	onClick="nextActive()" ) Next
+				else
+					li
+						p=user.excuse + " " + i
+						button( onClick="prevActive()" ) Previous
+						button(	onClick="nextActive()" ) Next

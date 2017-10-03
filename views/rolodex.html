@@ -1,0 +1,11 @@
+<h1>Excuse Roladex</h1>	
+<h3>Inspired by Seinfeld</h3>
+<div id="roladex">
+	<ul>
+		<li class="card" v-for="excuse in excuses" v-bind:class="{ 'active': excuse.active}">
+			<span>{{ excuse.id }}. {{ excuse.text }}</span>
+			<button v-on:click="prevActive(excuse)">Previous</button>
+			<button v-on:click="nextActive(excuse)">Next</button>
+		</li>
+	</ul>
+</div>
